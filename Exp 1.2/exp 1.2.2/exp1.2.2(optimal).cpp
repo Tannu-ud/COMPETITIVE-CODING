@@ -6,8 +6,10 @@ int main()
     cout<<"Enter size: ";
     cin >> n;
     int arr[n];
+    cout<<"Enter Array: ";
     for(int i = 0; i < n; i++)
         cin >> arr[i];
+    cout<<"Enter Target: ";
     cin >> target;
     int low = 0, high = n - 1;
     while(low <= high)
