@@ -1,4 +1,5 @@
-//Leet Code Problem 34
+// LeetCode Problem 34
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -6,11 +7,15 @@ using namespace std;
 vector<int> searchRange(vector<int>& nums, int target) {
     int first = -1, last = -1;
 
+    // Checking the array to find the first and last position
     for (int i = 0; i < nums.size(); i++) {
         if (nums[i] == target) {
+
+            // Store the first occurrence only once
             if (first == -1)
                 first = i;
 
+            // Keep updating last whenever target is found
             last = i;
         }
     }
@@ -34,6 +39,7 @@ int main() {
     cout << "Enter target: ";
     cin >> target;
 
+    // Function returns both starting and ending positions
     vector<int> result = searchRange(nums, target);
 
     cout << "First and last position: ";
